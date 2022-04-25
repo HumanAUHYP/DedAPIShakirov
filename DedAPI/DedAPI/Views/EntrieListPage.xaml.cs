@@ -46,5 +46,13 @@ namespace DedAPI.Views
             Source = Source.FindAll(a => a.HTTPS == false);
             LVDeds.ItemsSource = Source;
         }
+
+        private void search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (search.Text != "")
+                LVDeds.ItemsSource = Source.FindAll(a => a.API.Contains(search.Text) || a.Description.Contains(search.Text));
+            else
+                LVDeds.ItemsSource = Source;
+        }
     }
 }

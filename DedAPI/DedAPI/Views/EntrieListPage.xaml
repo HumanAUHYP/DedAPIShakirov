@@ -8,8 +8,8 @@
             <Button x:Name="btnSortAZ" Text="Sort by AZ" Clicked="btnSortAZ_Clicked"/>
             <Button x:Name="btnSortZA" Text="Sort by ZA" Clicked="btnSortZA_Clicked"/>
             <Button x:Name="btnSupportNot" Text="HTTPS don't support" Clicked="btnSupportNot_Clicked"/>
-
         </StackLayout>
+        <SearchBar x:Name="search" TextChanged="search_TextChanged"/>
 
         <ListView x:Name="LVDeds" HasUnevenRows="True" ItemSelected="LVDeds_ItemSelected">
             <ListView.ItemTemplate>
