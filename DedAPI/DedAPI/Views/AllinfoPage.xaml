@@ -8,7 +8,7 @@
         <Label Text="{Binding Auth}"/>
         <Label x:Name="lbHttps"/>
         <Label Text="{Binding Cors}"/>
-        <Label Text="{Binding Link}"/>
+        <Label x:Name="lbUrl" Text="{Binding Link}" TextColor="Blue" TextDecorations="Underline" FontAttributes="Bold"/>
         <Label Text="{Binding Category}"/>
     </StackLayout>
 </ContentPage>

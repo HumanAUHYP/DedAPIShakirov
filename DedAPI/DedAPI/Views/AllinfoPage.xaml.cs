@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,6 +20,13 @@ namespace DedAPI.Views
                 lbHttps.Text = "Поддерживает HTTPS";
             else
                 lbHttps.Text = "Не поддерживает HTTPS";
+
+            var temp = selectedModel.Link;
+            var tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += (s, e) => {
+                Launcher.OpenAsync(temp);
+            };
+            lbUrl.GestureRecognizers.Add(tapGestureRecognizer);
         }
     }
 }
