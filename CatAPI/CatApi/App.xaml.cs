@@ -4,7 +4,7 @@ using Xamarin.Forms.Xaml;
 using DedApi.Services;
 using DedApi.Views;
 
-namespace DedApi
+namespace CatApi
 {
     public partial class App : Application
     {
